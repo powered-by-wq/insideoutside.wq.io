@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{label}}</title>
+    {{>head}}
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header">
+        {{>home}}
+        <h1>{{label}}</h1>
+        {{#page_config.can_change}}
+        <a href="{{rt}}/categorys/{{id}}/edit" data-icon="edit" data-transition="flip">
+          Edit
+        </a>
+        {{/page_config.can_change}}
+      </div>
+      <div role="main" class="ui-content">
+          <h1>{{label}}</h1>
+          <table>
+            <tr>
+              <th>Name</th>
+              <td>{{name}}</td>
+            </tr>
+            <tr>
+              <th>Wikipedia Link</th>
+              <td>{{link}}</td>
+            </tr>
+          </table>
+        <h3>Photo</h3>
+        <img src="{{photo}}" alt="Photo - {{label}}" style="max-width:100%">
+      </div>
+    </div>
+  </body>
+</html>

@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'wq.db.rest.auth',
 
     # Project apps
+    'category',
+    'observation',
 ]
 
 MIDDLEWARE_CLASSES = [
