@@ -24,6 +24,14 @@
               <th>Date</th>
               <td>{{date}}</td>
             </tr>
+            {{#results_json}}
+            <tr>
+              <th>Results</th>
+              <td><table style='border:1px solid #ccc; border-radius: 1em;padding:0.5em;'>{{#result}}
+                <tr><td>{{title}}</td><td>{{confidence}}</td></tr>
+              {{/result}}</table></td>
+            </tr>
+            {{/results_json}}
             <tr>
               <th>Category</th>
               <td>{{category_label}}</td>

@@ -1,12 +1,13 @@
 define(['wq/app', 'wq/map', 'wq/patterns', 'wq/photos', 'wq/locate',
-        './config',
+        './classify', './config',
         'leaflet.draw', 'leaflet.markercluster'],
-function(app, map, patterns, photos, locate, config) {
+function(app, map, patterns, photos, locate, classify, config) {
 
 app.use(map);
 app.use(patterns);
 app.use(photos);
 app.use(locate);
+app.use(classify);
 
 config.presync = presync;
 config.postsync = postsync;

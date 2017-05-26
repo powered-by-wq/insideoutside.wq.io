@@ -5,6 +5,8 @@ class Observation(models.Model):
     date = models.DateField(
         verbose_name="Date",
     )
+    uploaded = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    results = models.TextField(null=True, blank=True)
     photo = models.ImageField(
         upload_to="observations",
         verbose_name="Photo",

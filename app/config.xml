@@ -49,4 +49,6 @@
   </config-file>
   <preference name="ShowSplashScreenSpinner" value="false" />
 
+  <plugin spec="https://github.com/heigeo/cordova-plugin-tensorflow.git" />
+
 </widget>
