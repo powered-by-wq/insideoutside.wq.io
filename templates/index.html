@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 
-<!--
-NOTE: This template is only meant to provide a bootstrap to help new projects
-get up and running with wq.  Please throw this out and replace it with your own
-interesting and unique designs, styles and layouts.  The sky is the limit!
-
-To make your application work offline using the old "application cache" standard,
-uncomment the manifest attribute below.  This is disabled by default because it
-isn't always needed and it makes debugging more tricky.
-See https://github.com/wq/wq.app/issues/63
--->
 <html><!-- manifest="insideoutside.appcache" -->
   <head>
-    <title>insideoutside Project</title>
+    <title>Inside/Outside Project</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
     {{>head}}
@@ -20,16 +10,19 @@ See https://github.com/wq/wq.app/issues/63
   <body>
     <div data-role="page" class="ui-page">
       <div data-role="header">
-        <h1>insideoutside Project</h1>
+        <h1>Inside/Outside Project</h1>
       </div>
       <div role="main" class="ui-content">
         <p>Hello, world!</p>
-        <ul data-role="listview">
-          <!-- Note: in many cases, you will want to replace this with a
-          hardcoded list of links (rather than the default pages list) -->
-          {{#pages}}
-          <li><a href="{{rt}}/{{url}}{{#list}}/{{/list}}">{{name}} {{#list}}list{{/list}}</a></li>
-          {{/pages}}
+        <ul data-role="listview" data-inset="true">
+          <li data-role="list-divider">Tools</li>
+          <li data-icon="plus"><a href="{{rt}}/observations/new">Add Observation</a></li>
+          <li data-icon="grid"><a href="{{rt}}/observations/">All Observations</a></li>
+          <li data-icon="bullets"><a href="{{rt}}/categories/">Image Categories</a></li>
+          <li data-role="list-divider">Help</li>
+          <li data-icon="action">
+            <a href="https://tensorflow.wq.io">Project Info</a>
+          </li>
         </ul>
       </div>
       <p class="footer">
