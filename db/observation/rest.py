@@ -5,6 +5,7 @@ from .models import Observation
 rest.router.register_model(
     Observation,
     fields="__all__",
+    locate=True,
     map=[{
         'mode': 'list',
         'autoLayers': True,
@@ -17,17 +18,8 @@ rest.router.register_model(
         'mode': 'edit',
         'layers': [{
             'type': 'geojson',
-            'name': 'geometry',
-            'url': 'observations/{{id}}/edit.geojson',
-            'draw': {
-                'circle': False,
-                'marker': {},
-                'polyline': False,
-                'polygon': False,
-                'rectangle': False,
-            },
-            'geometryField': 'geometry',
-            'flatten': True,
+            'name': 'Location',
+            'url': 'reports/{{id}}.geojson',
         }],
     }],
 )
