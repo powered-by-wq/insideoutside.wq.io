@@ -76,6 +76,9 @@ from wq.db.default_settings import (
     SRID,
     DEFAULT_AUTH_GROUP,
 )
+ANONYMOUS_PERMISSIONS = [
+    'observation.add_observation',
+]
 
 WSGI_APPLICATION = 'insideoutside.wsgi.application'
 
