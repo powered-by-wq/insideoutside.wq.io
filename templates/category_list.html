@@ -10,7 +10,7 @@
         {{>home}}
         <h1>category List{{#parent_id}} for {{parent_label}}{{/parent_id}}</h1>
         {{#page_config.can_add}}
-        <a href="{{rt}}/categorys/new{{#parent_id}}?{{parent_page}}_id={{parent_id}}{{/parent_id}}" data-icon="plus">
+        <a href="{{rt}}/categories/new{{#parent_id}}?{{parent_page}}_id={{parent_id}}{{/parent_id}}" data-icon="plus">
           Add New
         </a>
         {{/page_config.can_add}}
@@ -57,12 +57,12 @@
             {{/unsynced}}
             {{#list}}
             <li>
-              <a href="{{rt}}/categorys/{{id}}">{{label}}</a>
+              <a href="{{rt}}/categories/{{id}}">{{label}}</a>
             </li>
             {{/list}}
             {{#page_config.can_add}}
             <li data-icon="plus" data-theme="b">
-              <a href="{{rt}}/categorys/new{{#parent_id}}?{{parent_page}}_id={{parent_id}}{{/parent_id}}">Add category</a>
+              <a href="{{rt}}/categories/new{{#parent_id}}?{{parent_page}}_id={{parent_id}}{{/parent_id}}">Add category</a>
             </li>
             {{/page_config.can_add}}
           </ul>

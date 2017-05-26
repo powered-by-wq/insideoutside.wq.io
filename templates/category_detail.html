@@ -10,7 +10,7 @@
         {{>home}}
         <h1>{{label}}</h1>
         {{#page_config.can_change}}
-        <a href="{{rt}}/categorys/{{id}}/edit" data-icon="edit" data-transition="flip">
+        <a href="{{rt}}/categories/{{id}}/edit" data-icon="edit" data-transition="flip">
           Edit
         </a>
         {{/page_config.can_change}}
@@ -23,12 +23,13 @@
               <td>{{name}}</td>
             </tr>
             <tr>
-              <th>Wikipedia Link</th>
-              <td>{{link}}</td>
+              <th>Description</th>
+              <td>{{description}}</td>
             </tr>
           </table>
-        <h3>Photo</h3>
-        <img src="{{photo}}" alt="Photo - {{label}}" style="max-width:100%">
+          <ul data-role="listview" data-inset="true">
+            <li data-icon="bullets"><a href="{{rt}}/categories/{{id}}/observations">View Observations</a></li>
+          </ul>
       </div>
     </div>
   </body>

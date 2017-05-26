@@ -18,7 +18,21 @@ class Category(models.Model):
         blank=True,
         verbose_name="Wikipedia Link",
     )
+    description = models.TextField(
+        null=True,
+        blank=True,
+        verbose_name="Description",
+    )
+    order = models.IntegerField(
+        null=True,
+        blank=True,
+        verbose_name="Order",
+    )
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name = "category"
-        verbose_name_plural = "categorys"
+        verbose_name_plural = "categories"
+        ordering = ('order', 'name',)
