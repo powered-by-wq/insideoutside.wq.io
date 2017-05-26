@@ -51,6 +51,14 @@ class Observation(models.Model):
         verbose_name="Notes",
     )
 
+    wq_label_template = "{{category_id}} on {{date}}"
+
+    def __str__(self):
+        if not self.category:
+            return "New Observation"
+        return "%s on %s" % (self.category, self.date)
+
     class Meta:
         verbose_name = "observation"
         verbose_name_plural = "observations"
+        ordering = ('-pk',)

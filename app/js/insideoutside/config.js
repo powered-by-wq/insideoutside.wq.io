@@ -10,7 +10,20 @@ config.router = {
 config.template = {
     'templates': templates,
     'defaults': {
-        'version': version
+        'version': version,
+        'date': function() {
+            var date = new Date();
+            return (
+                date.getFullYear() + '-' +
+                (date.getMonth() < 9 ? '0' : '') +
+                (date.getMonth() + 1) + '-' +
+                (date.getDate() <= 9 ? '0' : '') +
+                date.getDate()
+	    );
+        },
+        'is_gps': function() {
+            return this.name == 'gps';
+        }
     }
 };
 

@@ -93,7 +93,7 @@
               <fieldset data-xform-type='select one' data-role='controlgroup' data-type='horizontal'>
                 <legend>Location Mode</legend>
                 {{#toggle_choices}}
-                <input type='radio' id='observation-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}>
+                <input type='radio' id='observation-toggle-{{name}}' name='toggle' value='{{name}}'{{#selected}} checked{{/selected}}{{#is_gps}} checked{{/is_gps}}>
                 <label for='observation-toggle-{{name}}'>{{label}}</label>
                 {{/toggle_choices}}
               </fieldset>
