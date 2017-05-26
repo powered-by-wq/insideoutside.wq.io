@@ -37,7 +37,7 @@
           <ul data-role="listview" data-inset="true">
             <li class="ui-field-contain">
               <label for='category-name'>Name</label>
-              <input id='category-name' type='text' data-xform-type='string' name='name' value="{{name}}">
+              <textarea id='category-name' name='name' data-xform-type="text">{{name}}</textarea>
               <p class='error category-name-errors'></p>
             </li>
             {{^photo.name}}
