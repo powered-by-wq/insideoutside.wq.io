@@ -29,7 +29,7 @@ define({
         if (this.graph) {
             return this.graph;
         }
-        var name = 'final_model_nsideoutside2';
+        var name = 'final_model_nsideoutside3';
         var url = 'https://tensorflow.wq.io/media/graphs/' + name + '.zip';
         var opts = {
             'label': name,
