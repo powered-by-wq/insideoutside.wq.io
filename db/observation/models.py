@@ -60,6 +60,10 @@ class Observation(models.Model):
             return "New Observation"
         return "%s on %s" % (self.category, self.date)
 
+    @property
+    def export_category(self):
+        return str(self.category).replace(" (indicate in Notes)", "")
+
     class Meta:
         verbose_name = "observation"
         verbose_name_plural = "observations"
